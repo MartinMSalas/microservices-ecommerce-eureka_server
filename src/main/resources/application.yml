@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: eureka-server
+server:
+  port: 8761
+    
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+
+logging:
+  level:
+    root: INFO
+    com.ecommerce.order_service: INFO
+  file:
+    name: logs/${spring.application.name}.log
+  logback:
+    rollingpolicy:
+      max-file-size: 5MB
+#      max-history: 7
